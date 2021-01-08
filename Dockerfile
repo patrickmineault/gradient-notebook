@@ -33,7 +33,7 @@ RUN curl -o ~/miniconda.sh -O  https://repo.anaconda.com/miniconda/Miniconda3-la
     rm ~/miniconda.sh && \
     /opt/conda/bin/conda install conda-build
     
-RUN wget -O- http://neuro.debian.net/lists/xenial.us-nh.libre | /etc/apt/sources.list.d/neurodebian.sources.list
+RUN wget -O- http://neuro.debian.net/lists/xenial.us-nh.libre | tee /etc/apt/sources.list.d/neurodebian.sources.list
 RUN apt-key adv --recv-keys --keyserver hkp://pool.sks-keyservers.net:80 0xA5D32F012649A5A9
 RUN apt-get update && apt-get install -y --no-install-recommends datalad git
 
