@@ -10,7 +10,6 @@ dependencies:
   - matplotlib
   - cuda92
   - jupyter
-  - jupyterlab
   - pandas
   - requests
   - pyyaml
