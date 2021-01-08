@@ -17,10 +17,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     zip \
     unzip \
     openssh-client \
-    libpng-dev &&\
+    libpng-dev \
+    wget \
+    software-properties-common &&\
     rm -rf /var/lib/apt/lists/*\
-    wget\
-    software-properties-common
     
 RUN add-apt-repository ppa:git-core/ppa -y
 
